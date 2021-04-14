@@ -1,0 +1,7 @@
+{
+  "name": "AppDMM",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -75,7 +75,7 @@
       <ion-card-content>
         <p style="font-size: 25px;"><span class="font-weight-bold">Tipo de User: </span>{{user.tipo}}</p>
         <ion-button color="warning" (click)="editar(user)"><ion-icon name="pencil-outline"></ion-icon></ion-button>
-        <ion-button color="danger" (click)="service.eliminarUser(user._id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        <ion-button color="danger" (click)="eliminarUser(user._id,forma)"><ion-icon name="trash-outline"></ion-icon></ion-button>
       </ion-card-content>
     </ion-card>
 

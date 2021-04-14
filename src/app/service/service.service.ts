@@ -49,12 +49,7 @@ export default class ServiceService {
   }
 
   eliminarUser(id){
-    return this.http.post(`${this.urlUser}/delete`,{id:id}).subscribe((res:any)=>{
-      this.getUsuarios();
-    },err =>{
-      console.log(err);
-      
-    })
+    return this.http.post(`${this.urlUser}/delete`,{id:id}).toPromise();
   }
  //------------------------------------------------------------------------------------------------------------  
   login(usuario){

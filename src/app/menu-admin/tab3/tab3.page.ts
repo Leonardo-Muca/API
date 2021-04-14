@@ -75,6 +75,31 @@ altaUser(forma:any){
   
 }
 
+eliminarUser(id,forma:any){
+  id = this.usu._id
+  this.service.eliminarUser(id).then(async(res:any)=>{
+    console.log(res);
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Success',            
+    message:' Usuario eliminado con exito',
+      buttons: ['OK']
+    });    
+    await alert.present();
+    this.service.getUsuarios()
+    forma.reset();
+  }).catch(async err =>{
+    console.log(err);
+    const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'Error',            
+      message: err,
+        buttons: ['OK']
+      });    
+      await alert.present();
+  })
+}
+
 editar(usuario:any){
   this.usu = usuario
 }
